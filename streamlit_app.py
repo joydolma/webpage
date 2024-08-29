@@ -5,7 +5,7 @@ from streamlit_lottie import st_lottie
 
 
 #---CONFIG URL
-st.set_page_config(page_title="Welcome Homie", page_icon="🤘", layout="wide")
+st.set_page_config(page_title="Suraj Sinha Space", page_icon="💻", layout="wide")
 
 
 #---ANIMATIONS
@@ -23,24 +23,34 @@ local_css("style/style.css")
 
 
 #---HEADER---
+st.sidebar.title("Navigation")
+st.sidebar.markdown("[Home](#home)")
+st.sidebar.markdown("[Discover Our Magic](#discover-our-magic)")
+st.sidebar.markdown("[A Quick Breakdown](#quick-breakdown)")
+st.sidebar.markdown("[Portfolio Highlights](#portfolio-highlights)")
+st.sidebar.markdown("[Reach Out](#reach-out)")
+
+# Anchor links for in-page navigation
+st.markdown('<a name="home"></a>', unsafe_allow_html=True)
+
 with st.container():
     st.markdown(
         """
-        <div style="text-align: right;">
-            <img src="https://c.tenor.com/S3cTWxIvxj0AAAAC/tenor.gif" style="height: 200px;">
+        <div style="text-align: left;">
+            <img src="https://i.gifer.com/origin/1b/1b5cdccd9ad7737669efeddd802254ad_w200.gif" style="height: 200px;">
         </div>
         """,
         unsafe_allow_html=True
     )
     st.markdown(
         """
-        <h2 style='text-align: center; color: #000000; background-color: #E6E6FA; padding: 10px; font-size: 100;'>WELCOME TO DREAMCRAFT FX MEDIA</h2>
+        <h2 style='text-align: center; color: #000000; background-color: #E6E6FA; padding: 10px; font-size: 100;'>WELCOME TO SURAJ SINHA SPACE</h2>
         """,
         unsafe_allow_html=True
     )
     st.write("##")
     st.subheader("Crafting Cinematic Magic for the World")
-    st.write("At Dreamcraft FX Media, we're dedicated to turning your creative visions into reality. Our passion is to enhance your workflows by integrating advanced pipeline tools and crafting custom solutions.")
+    st.write("At Suraj Sinha Space, we're dedicated to turning your creative visions into reality. Our passion is to enhance your workflows by integrating advanced pipeline tools and crafting custom solutions.")
     st.write("[Click here for more info >](https://in.linkedin.com/in/suraj-sinha-54b07b1a8)")
 
 
@@ -49,6 +59,8 @@ lottie_animation = load_lottie_url("https://lottie.host/1e6f6b90-d56b-41ed-a14d-
 
 
 #---INTERESTING FACTS---
+st.markdown('<a name="discover-our-magic"></a>', unsafe_allow_html=True)
+
 with st.container():
     st.write("---")
     leftColumn, rightColumn = st.columns(2)
@@ -57,7 +69,7 @@ with st.container():
         st.write("##")
         st.write(
             '''
-            At Dreamcraft FX Media, we breathe life into your creative projects with cutting-edge VFX techniques. Here's a peek into what we do:
+            At Suraj Sinha Space, we breathe life into your creative projects with cutting-edge VFX techniques. Here's a peek into what we do:
             - **Visual Effects Design:** Crafting stunning effects that bring your visuals to life.
             - **Pipeline Integration:** Seamlessly integrating tools to streamline your VFX workflow.
             - **Custom Gizmos:** Building tools tailored to your needs to enhance your creative process.
@@ -70,6 +82,8 @@ with st.container():
         st_lottie(lottie_animation, height=500, key="coding")
         
 #---WE DIG
+st.markdown('<a name="quick-breakdown"></a>', unsafe_allow_html=True)
+
 with st.container():
     st.write("---")
     st.markdown(
@@ -85,15 +99,17 @@ with st.container():
         video_bytes = video_file.read()
         st.video(video_bytes, start_time=0)
     with videoColumn2:
-        video_file = open("videos/vfx.mp4", "rb")
+        video_file = open("videos/unreal.mp4", "rb")
         video_bytes = video_file.read()
         st.video(video_bytes, start_time=0)
     with videoColumn3:
-        video_file = open("videos/vfx.mp4", "rb")
+        video_file = open("videos/breakdown.mp4", "rb")
         video_bytes = video_file.read()
         st.video(video_bytes, start_time=0)
         
 #---PORTFOLIO---
+st.markdown('<a name="portfolio-highlights"></a>', unsafe_allow_html=True)
+
 with st.container():
     st.write("---")
     st.subheader("Portfolio Highlights")
@@ -109,15 +125,15 @@ with st.container():
 )
     st.image("images/portfolio_preview.gif", caption="Portfolio Preview")
 
-
-
 #---CONTACT ME
+st.markdown('<a name="reach-out"></a>', unsafe_allow_html=True)
+
 with st.container():
     st.write("---")
     st.header("Reach Out")
     
     contact_me = """
-    <form action="https://formsubmit.co/farjiwalaid02@gmail.com" method="POST">
+    <form action="https://formsubmit.co/4ef83171b9440cf4176a0b5392bcbae6" method="POST">
         <input type="hidden" name="_captcha" value="false">
         <input type="text" name="name" placeholder="Your name" required>
         <input type="email" name="email" placeholder="Your email" required>
